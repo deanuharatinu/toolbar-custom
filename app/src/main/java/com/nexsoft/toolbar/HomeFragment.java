@@ -37,6 +37,13 @@ public class HomeFragment extends Fragment {
 //        actionBar.setDisplayHomeAsUpEnabled(true);
 //        actionBar.setDisplayShowTitleEnabled(false);
 
+        appbar.onSubmitQuery(new ToolbarCustom.SearchInterface() {
+            @Override
+            public void onQuerySubmit(String query) {
+                Toast.makeText(requireContext(), query, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         toolbar.setNavigationOnClickListener(viewOnClick ->
                 Toast.makeText(requireContext(), "Clicked hamburger", Toast.LENGTH_SHORT).show());
 

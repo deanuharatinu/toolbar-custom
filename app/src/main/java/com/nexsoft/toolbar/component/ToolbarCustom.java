@@ -36,6 +36,7 @@ public class ToolbarCustom extends AppBarLayout {
     private boolean centeredTitle;
     private int hamburger;
     private int toolbarType;
+    private TextInputEditText edtSearch;
     private String queryText = "";
 
     public ToolbarCustom(@NonNull Context context, @Nullable AttributeSet attrs) {
@@ -126,7 +127,7 @@ public class ToolbarCustom extends AppBarLayout {
         linearLayout.setLayoutParams(llLayoutParams);
 
         // TextField
-        TextInputEditText edtSearch = new TextInputEditText(context);
+        edtSearch = new TextInputEditText(context);
         LinearLayout.LayoutParams edtSearchLayout = new LinearLayout
                 .LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1.0F);
         edtSearch.setLayoutParams(edtSearchLayout);
@@ -154,7 +155,7 @@ public class ToolbarCustom extends AppBarLayout {
 
         edtSearch.setOnEditorActionListener((v, actionId, event) -> {
             if (actionId == EditorInfo.IME_ACTION_DONE) {
-                
+                queryText = edtSearch.getText().toString();
             }
             return false;
         });
@@ -177,8 +178,15 @@ public class ToolbarCustom extends AppBarLayout {
         return (int) (dp * scale + 0.5F);
     }
 
-    public void onSubmit(SearchInterface searchInterface) {
-        searchInterface.onQuerySubmit();
+    public void onSubmitQuery(@NonNull SearchInterface searchInterface) {
+        edtSearch.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == EditorInfo.IME_ACTION_DONE && edtSearch.getText() != null) {
+                queryText = edtSearch.getText().toString();
+                searchInterface.onQuerySubmit(queryText);
+            }
+            return true;
+        });
+
     }
 
     public interface SearchInterface {
