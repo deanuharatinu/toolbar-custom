@@ -6,36 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!--        <com.google.android.material.appbar.AppBarLayout-->
-    <!--            android:id="@+id/asdf"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="wrap_content"-->
-    <!--            android:backgroundTint="@color/white"-->
-    <!--            app:layout_constraintStart_toStartOf="parent"-->
-    <!--            app:layout_constraintTop_toTopOf="parent">-->
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/app_bar_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
-    <!--            <com.google.android.material.appbar.MaterialToolbar-->
-    <!--                android:id="@+id/app_bar"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="?attr/actionBarSize"-->
-    <!--                app:navigationIcon="@drawable/ic_hamburger"-->
-    <!--                app:menu="@menu/search_toolbar_menu">-->
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:id="@+id/app_bar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize"-->
+<!--            app:navigationIcon="@drawable/ic_back_button">-->
 
+<!--            <com.google.android.material.imageview.ShapeableImageView-->
+<!--                android:layout_width="34dp"-->
+<!--                android:layout_height="34dp"-->
+<!--                android:layout_marginEnd="8dp"-->
+<!--                android:src="@drawable/ic_hamburger" />-->
 
-    <!--            </com.google.android.material.appbar.MaterialToolbar>-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:orientation="vertical">-->
 
-    <!--        </com.google.android.material.appbar.AppBarLayout>-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Full Name" />-->
 
-    <com.nexsoft.toolbar.component.ToolbarCustom
-        android:id="@+id/app_bar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:fitsSystemWindows="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:toolbar_title="Title baru"
-        app:centered_title="true"
-        app:toolbar_type="search_bar" />
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Online" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </com.google.android.material.appbar.MaterialToolbar>-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+            <com.nexsoft.toolbar.component.ToolbarCustom
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:fitsSystemWindows="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:toolbar_title="Title baru"
+                app:toolbar_type="online_status"
+                app:online_type="online_without_icon"
+                />
 
     <TextView
         android:layout_width="match_parent"

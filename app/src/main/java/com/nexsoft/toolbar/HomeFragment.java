@@ -41,10 +41,10 @@ public class HomeFragment extends Fragment {
         ((MainActivity) requireActivity()).setSupportActionBar(toolbar);
 
         // To set back button / hamburger icon
-        setEnableNavigation(false);
+        setEnableNavigation(true);
 
         // To enable options menu
-        setEnableMenu(false);
+        setEnableMenu(true);
 
         // To set back button / hamburger button action
         appbar.onNavClickListener(viewNavClick ->
@@ -53,6 +53,10 @@ public class HomeFragment extends Fragment {
         // To set query callback
         appbar.onSubmitQuery(query ->
                 Toast.makeText(requireContext(), query, Toast.LENGTH_SHORT).show());
+
+        // To set cart action
+        appbar.onCartClickListener(viewCartClick ->
+                Toast.makeText(requireContext(), "Clicked cart", Toast.LENGTH_SHORT).show());
 
         // Set programmatically
 //        setProgrammatically(appbar);
