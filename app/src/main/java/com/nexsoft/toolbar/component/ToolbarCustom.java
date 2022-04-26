@@ -54,7 +54,7 @@ public class ToolbarCustom extends AppBarLayout {
     private int toolbarType;
     private int onlineType;
     private boolean enableCart;
-    private String fullName;
+    private String fullName = "";
     private TextView tvFullName;
     private int onlineStatus;
     private TextInputEditText edtSearch;
@@ -77,6 +77,8 @@ public class ToolbarCustom extends AppBarLayout {
         enableCart = values.getBoolean(R.styleable.ToolbarCustom_enable_cart, false);
         onlineType = values.getInt(R.styleable.ToolbarCustom_online_type, 1);
         onlineStatus = values.getInt(R.styleable.ToolbarCustom_online_status, 1);
+        fullName = values.getString(R.styleable.ToolbarCustom_full_name);
+        if (fullName == null) fullName = "";
         values.recycle();
     }
 
@@ -151,7 +153,7 @@ public class ToolbarCustom extends AppBarLayout {
         LinearLayout.LayoutParams fullNameLayout = new LinearLayout
                 .LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         tvFullName.setLayoutParams(fullNameLayout);
-        tvFullName.setText("Full Name");
+        tvFullName.setText(fullName);
         tvFullName.setTypeface(tvFullName.getTypeface(), Typeface.BOLD);
 
         // Add textView for online status

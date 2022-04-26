@@ -58,7 +58,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:toolbar_title="Title baru"
                 app:toolbar_type="online_status"
-                app:online_type="online_without_icon"
+                app:online_type="online_with_icon"
                 />
 
     <TextView

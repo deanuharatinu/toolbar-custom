@@ -3,6 +3,7 @@
     <declare-styleable name="ToolbarCustom">
         <attr name="centered_title" format="boolean" />
         <attr name="hamburger_icon" format="reference" />
+        <attr name="full_name" format="string"/>
         <attr name="toolbar_type" format="integer">
             <flag name="title_back_button" value="1" />
             <flag name="title_back_button_and_menu" value="2" />
