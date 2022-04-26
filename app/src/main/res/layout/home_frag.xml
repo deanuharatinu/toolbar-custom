@@ -6,71 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <!--    <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+    <!--        <com.google.android.material.appbar.AppBarLayout-->
+    <!--            android:id="@+id/asdf"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:backgroundTint="@color/white"-->
+    <!--            app:layout_constraintStart_toStartOf="parent"-->
+    <!--            app:layout_constraintTop_toTopOf="parent">-->
 
-            <com.google.android.material.appbar.MaterialToolbar
+    <!--            <com.google.android.material.appbar.MaterialToolbar-->
+    <!--                android:id="@+id/app_bar"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="?attr/actionBarSize"-->
+    <!--                app:navigationIcon="@drawable/ic_hamburger"-->
+    <!--                app:menu="@menu/search_toolbar_menu">-->
 
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize">
 
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    app:cardCornerRadius="120dp"
-                    app:cardElevation="0dp">
+    <!--            </com.google.android.material.appbar.MaterialToolbar>-->
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="Back Button"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_back_button" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginVertical="8dp"
-                    android:layout_marginEnd="16dp"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="0dp"
-                    app:strokeColor="#CACCCF"
-                    app:strokeWidth="1dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/edt_search"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:background="@null"
-                            android:layout_weight="1"
-                            android:hint="search-xs"
-                            android:padding="6dp" />
-
-                        <ImageView
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginEnd="16dp"
-                            android:contentDescription="Search Icon"
-                            android:src="@drawable/ic_search" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </com.google.android.material.appbar.MaterialToolbar>
-
-        </com.google.android.material.appbar.AppBarLayout>-->
+    <!--        </com.google.android.material.appbar.AppBarLayout>-->
 
     <com.nexsoft.toolbar.component.ToolbarCustom
         android:id="@+id/app_bar"
@@ -79,15 +33,18 @@
         android:fitsSystemWindows="true"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:toolbar_title="Title baru"
+        app:centered_title="true"
         app:toolbar_type="search_bar" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center"
         android:text="@string/hello_blank_fragment"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/app_bar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
