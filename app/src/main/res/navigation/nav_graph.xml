@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/bottomNavFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
@@ -15,4 +15,29 @@
         android:name="com.nexsoft.toolbar.BottomNavFragment"
         android:label="bottom_nav_frag"
         tools:layout="@layout/bottom_nav_frag" />
+    <fragment
+        android:id="@+id/oneFragment"
+        android:name="com.nexsoft.toolbar.OneFragment"
+        android:label="one_frag"
+        tools:layout="@layout/one_frag" />
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="com.nexsoft.toolbar.TwoFragment"
+        android:label="two_frag"
+        tools:layout="@layout/two_frag" />
+    <fragment
+        android:id="@+id/threeFragment"
+        android:name="com.nexsoft.toolbar.ThreeFragment"
+        android:label="three_frag"
+        tools:layout="@layout/three_frag" />
+    <fragment
+        android:id="@+id/fourFragment"
+        android:name="com.nexsoft.toolbar.FourFragment"
+        android:label="four_frag"
+        tools:layout="@layout/four_frag" />
+    <fragment
+        android:id="@+id/fiveFragment"
+        android:name="com.nexsoft.toolbar.FiveFragment"
+        android:label="five_frag"
+        tools:layout="@layout/five_frag" />
 </navigation>

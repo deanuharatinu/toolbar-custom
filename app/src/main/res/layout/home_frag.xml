@@ -6,214 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar_layout"
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/app_bar_layout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:id="@+id/app_bar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="?attr/actionBarSize">-->
+
+<!--        </com.google.android.material.appbar.MaterialToolbar>-->
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+    <com.nexsoft.toolbar.component.ToolbarCustom
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
+        android:layout_height="?attr/actionBarSize"
+        android:fitsSystemWindows="true"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/app_bar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/btn_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardCornerRadius="6dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_2"
-                    app:layout_constraintHorizontal_chainStyle="spread"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:id="@+id/iv_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_scan" />
-
-                        <TextView
-                            android:id="@+id/tv_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Scan"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/btn_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardCornerRadius="6dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintBottom_toBottomOf="@id/btn_1"
-                    app:layout_constraintEnd_toStartOf="@id/btn_3"
-                    app:layout_constraintStart_toEndOf="@+id/btn_1"
-                    app:layout_constraintTop_toTopOf="@id/btn_1">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:id="@+id/iv_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_upload" />
-
-                        <TextView
-                            android:id="@+id/tv_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Upload"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/btn_3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardCornerRadius="6dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintBottom_toBottomOf="@id/btn_2"
-                    app:layout_constraintEnd_toStartOf="@id/btn_4"
-                    app:layout_constraintStart_toEndOf="@id/btn_2"
-                    app:layout_constraintTop_toTopOf="@id/btn_2">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:id="@+id/iv_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_create" />
-
-                        <TextView
-                            android:id="@+id/tv_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Create"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/btn_4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardCornerRadius="6dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintBottom_toBottomOf="@id/btn_3"
-                    app:layout_constraintEnd_toStartOf="@id/btn_5"
-                    app:layout_constraintStart_toEndOf="@id/btn_3"
-                    app:layout_constraintTop_toTopOf="@id/btn_3">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:id="@+id/iv_4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_notification" />
-
-                        <TextView
-                            android:id="@+id/tv_4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Notification"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/btn_5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:cardCornerRadius="6dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintBottom_toBottomOf="@id/btn_4"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/btn_4"
-                    app:layout_constraintTop_toTopOf="@id/btn_4">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="5dp">
-
-                        <ImageView
-                            android:id="@+id/iv_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_setting" />
-
-                        <TextView
-                            android:id="@+id/tv_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Profile"
-                            android:textSize="11sp" />
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.appbar.MaterialToolbar>
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <!--            <com.nexsoft.toolbar.component.ToolbarCustom-->
-    <!--                android:id="@+id/app_bar"-->
-    <!--                android:layout_width="match_parent"-->
-    <!--                android:layout_height="?attr/actionBarSize"-->
-    <!--                android:fitsSystemWindows="true"-->
-    <!--                app:layout_constraintStart_toStartOf="parent"-->
-    <!--                app:layout_constraintTop_toTopOf="parent"-->
-    <!--                app:toolbar_title="Title baru"-->
-    <!--                app:toolbar_type="online_status"-->
-    <!--                app:online_type="online_with_icon"-->
-    <!--                />-->
+        app:layout_constraintTop_toTopOf="parent"
+        app:toolbar_title="Title baru"
+        app:toolbar_type="title_hamburger" />
 
     <TextView
         android:layout_width="match_parent"
@@ -224,5 +41,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar_layout" />
+        app:layout_constraintTop_toBottomOf="@id/app_bar" />
 </androidx.constraintlayout.widget.ConstraintLayout>
