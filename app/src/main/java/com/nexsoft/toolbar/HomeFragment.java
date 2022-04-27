@@ -34,29 +34,29 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ToolbarCustom appbar = view.findViewById(R.id.app_bar);
+//        ToolbarCustom appbar = view.findViewById(R.id.app_bar);
         // Material Toolbar reference for back/hamburger button onClickListener
-        MaterialToolbar toolbar = appbar.getToolbarView();
-//        MaterialToolbar toolbar = view.findViewById(R.id.app_bar);
+//        MaterialToolbar toolbar = appbar.getToolbarView();
+        MaterialToolbar toolbar = view.findViewById(R.id.app_bar);
         ((MainActivity) requireActivity()).setSupportActionBar(toolbar);
 
         // To set back button / hamburger icon
-        setEnableNavigation(true);
+        setEnableNavigation(false);
 
         // To enable options menu
-        setEnableMenu(true);
+        setEnableMenu(false);
 
         // To set back button / hamburger button action
-        appbar.onNavClickListener(viewNavClick ->
-                Toast.makeText(requireContext(), "Clicked navigation", Toast.LENGTH_SHORT).show());
-
-        // To set query callback
-        appbar.onSubmitQuery(query ->
-                Toast.makeText(requireContext(), query, Toast.LENGTH_SHORT).show());
-
-        // To set cart action
-        appbar.onCartClickListener(viewCartClick ->
-                Toast.makeText(requireContext(), "Clicked cart", Toast.LENGTH_SHORT).show());
+//        appbar.onNavClickListener(viewNavClick ->
+//                Toast.makeText(requireContext(), "Clicked navigation", Toast.LENGTH_SHORT).show());
+//
+//        // To set query callback
+//        appbar.onSubmitQuery(query ->
+//                Toast.makeText(requireContext(), query, Toast.LENGTH_SHORT).show());
+//
+//        // To set cart action
+//        appbar.onCartClickListener(viewCartClick ->
+//                Toast.makeText(requireContext(), "Clicked cart", Toast.LENGTH_SHORT).show());
 
         // Set programmatically
 //        setProgrammatically(appbar);

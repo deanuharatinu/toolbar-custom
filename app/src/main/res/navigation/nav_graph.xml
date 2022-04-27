@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/bottomNavFragment">
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.nexsoft.toolbar.HomeFragment"
         android:label="home_frag"
         tools:layout="@layout/home_frag" />
+    <fragment
+        android:id="@+id/bottomNavFragment"
+        android:name="com.nexsoft.toolbar.BottomNavFragment"
+        android:label="bottom_nav_frag"
+        tools:layout="@layout/bottom_nav_frag" />
 </navigation>
