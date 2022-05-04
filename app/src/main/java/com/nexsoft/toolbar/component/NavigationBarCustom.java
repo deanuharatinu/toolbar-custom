@@ -15,7 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.ConstraintSet;
-import androidx.fragment.app.Fragment;
 
 import com.google.android.material.card.MaterialCardView;
 import com.nexsoft.toolbar.R;
@@ -55,7 +54,6 @@ public class NavigationBarCustom extends ConstraintLayout {
     private int selectedMenu;
     private int selectedColor;
     private int unselectedColor;
-    private View selectedMenuView;
 
     public NavigationBarCustom(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -436,8 +434,8 @@ public class NavigationBarCustom extends ConstraintLayout {
     }
 
     public static class NavBarMenuModel {
-        private int menuIcon;
-        private String menuName;
+        private final int menuIcon;
+        private final String menuName;
 
         public NavBarMenuModel(int menuIcon, String menuName) {
             this.menuIcon = menuIcon;
