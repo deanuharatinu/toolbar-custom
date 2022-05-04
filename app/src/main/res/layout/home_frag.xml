@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-<!--    <com.google.android.material.appbar.AppBarLayout-->
-<!--        android:id="@+id/app_bar_layout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="@color/white"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent">-->
-
-<!--        <com.google.android.material.appbar.MaterialToolbar-->
-<!--            android:id="@+id/app_bar"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="?attr/actionBarSize">-->
-
-<!--        </com.google.android.material.appbar.MaterialToolbar>-->
-<!--    </com.google.android.material.appbar.AppBarLayout>-->
-
     <com.nexsoft.toolbar.component.ToolbarCustom
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
